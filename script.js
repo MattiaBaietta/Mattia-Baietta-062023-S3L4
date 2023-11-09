@@ -35,9 +35,12 @@ const generanumero= function(){
             numeriestratti.push(numrandom)
             console.log(numeriestratti)
         }
-        let casellahighlight=document.getElementById(numrandom)
-        casellahighlight.classList.add("bordo")
-                
+        let casellahighlight=document.getElementsByClassName(numrandom)
+        console.log(casellahighlight)
+        for(let i=0;i<casellahighlight.length;i++)
+        {
+        casellahighlight[i].style.border= "2px solid red"
+        }       
 }
 
 
@@ -48,7 +51,7 @@ const creaCelle = function(numeroCaselle){
     for(let i=0;i<numeroCaselle;i++)
     {
         const contenitorecasella=document.createElement("div")
-        contenitorecasella.id=celletombola[i]
+        contenitorecasella.className=celletombola[i]
         const casella=document.createElement("h2")
         casella.innerText=celletombola[i]
 
