@@ -51,9 +51,11 @@ const creaCelle = function(numeroCaselle){
     for(let i=0;i<numeroCaselle;i++)
     {
         const contenitorecasella=document.createElement("div")
-        contenitorecasella.className=celletombola[i]
+        contenitorecasella.classList.add (celletombola[i],"divtombola")
         const casella=document.createElement("h2")
         casella.innerText=celletombola[i]
+        casella.className="caselle"
+        
 
         divtombola.appendChild(contenitorecasella)
         contenitorecasella.appendChild(casella)
@@ -73,6 +75,7 @@ const creacartelle = function(){
         for(let i=0;i<numCartelle.value;i++)
         {
             const contenitorecartelle=document.createElement("div")
+            contenitorecartelle.classList="Tombola"
             posizionecartelle.appendChild(contenitorecartelle)
             provacartella[i]=[]
             
@@ -84,8 +87,9 @@ const creacartelle = function(){
                 contenitorecartelle.classList.add("divcartelle")
                 const contenitorecasella=document.createElement("div")
                 const casella=document.createElement("h2")
+                casella.classList="caselle"
                 let n1cartelle=Math.floor(Math.random()*90)
-                contenitorecasella.classList=n1cartelle
+                contenitorecasella.classList.add(n1cartelle,"divtombola")
                 if(provacartella[i].includes(n1cartelle))
                 {  
                     i2--
@@ -107,4 +111,3 @@ const creacartelle = function(){
 }
 
 creacartelle()
-//<div id="CartelleGenerate">

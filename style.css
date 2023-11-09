@@ -1,0 +1,13 @@
+.Tombola{
+    border: 2px solid ;
+}
+.divtombola{
+    display: inline-block;
+    font-size: 1em;
+    padding: 0px;
+    
+}
+.caselle{
+    border: 2px solid ;
+    padding: 30px;
+}
